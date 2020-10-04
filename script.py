@@ -1,5 +1,5 @@
 import json
-from flask import Flask
+from flask import Flask, request
 from serve import useless_function, get_classifier_api 
 
 app=Flask(__name__)
