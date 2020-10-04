@@ -1,6 +1,7 @@
 import json
 from flask import Flask, request
 from serve import useless_function, get_classifier_api 
+import pandas as pd 
 
 app=Flask(__name__)
 
@@ -20,7 +21,7 @@ def classify():
     their indices and then returns them as a json file.
     """
     # the data the user input, in json format
-    input_data = [request.json]
+    input_data = [pd.Series(request.json)]
     
     print (input_data)
 
