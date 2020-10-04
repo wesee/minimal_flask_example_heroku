@@ -21,7 +21,7 @@ def classify():
     their indices and then returns them as a json file.
     """
     # the data the user input, in json format
-    input_data = [pd.Series(request.json)]
+    input_data = [pd.Series(json.loads(request.json))]
     
     print (input_data)
 
