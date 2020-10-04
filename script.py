@@ -21,6 +21,8 @@ def classify():
     """
     # the data the user input, in json format
     input_data = [request.json]
+    
+    print (input_data)
 
     # use our API function to get the keywords
     output_data = classifier_api(input_data)
