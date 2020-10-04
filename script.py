@@ -28,11 +28,13 @@ def classify():
     # use our API function to get the keywords
     output_data = classifier_api(input_data)
 
+    print (output_data)
+    
     # convert our dictionary into a .json file
     # (returning a dictionary wouldn't be very
     # helpful for someone querying our API from
     # java; JSON is more flexible/portable)
-    response = json.dumps(output_data)
+    response = json.dumps(output_data.tolist())
 
     # return our json file
     return response
