@@ -1,6 +1,6 @@
 import json
 from flask import Flask, request
-from serve import useless_function, get_classifier_api 
+from serve import useless_function, get_classifier_api, get_bst_api
 import pandas as pd 
 
 app=Flask(__name__)
