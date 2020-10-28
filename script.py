@@ -47,6 +47,9 @@ bst_api = get_bst_api()
 
 @app.route('/bst', methods=['POST'])
 def bst():
+
+    print (request.json)
+
     # the data the user input, in json format
     input_data = [pd.Series(json.loads(request.json))]
     
