@@ -50,8 +50,12 @@ def bst():
 
     print (request.json)
 
+    data = request.json.replace("'", '"')
+
+    print(data)
+
     # the data the user input, in json format
-    input_data = [pd.Series(json.loads(request.json))]
+    input_data = [pd.Series(json.loads(data))]
     
     print (input_data)
 
