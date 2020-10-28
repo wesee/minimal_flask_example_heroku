@@ -24,3 +24,18 @@ def get_classifier_api():
     
     # return the function we just defined
     return classifier_api
+
+def get_bst_api():
+    
+    # read in pickled word processor. You could also load in
+    # other models as this step.
+    c = pickle.load(open("bst.pkl", "rb"))
+    
+    # Function to apply our model & extract keywords from a 
+    # provided bit of text
+    def bst_api(data): 
+        pred = c.predict(data)      
+        return pred
+    
+    # return the function we just defined
+    return bst_api

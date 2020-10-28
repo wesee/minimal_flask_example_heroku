@@ -42,3 +42,24 @@ def classify():
 
     # return our json file
     return response
+
+bst_api = get_bst_api()
+
+@app.route('/bst', methods=['POST'])
+def bst():
+    # the data the user input, in json format
+    input_data = [pd.Series(json.loads(request.json))]
+    
+    print (input_data)
+
+    # use our API function to get the keywords
+    output_data = bst_api(input_data)
+
+    print (output_data)
+    
+    # convert our dictionary into a .json file
+    response = json.dumps(output_data.tolist())
+
+    # return our json file
+    return response
+
