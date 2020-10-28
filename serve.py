@@ -5,7 +5,7 @@ def useless_function():
     """ 
     A function that returns some text
     """
-    return("some text")
+    return("pong!")
 
 # Function that takes loads in our pickled word processor
 # and defines a function for using it. This makes it easy

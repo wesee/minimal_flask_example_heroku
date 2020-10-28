@@ -5,6 +5,10 @@ import pandas as pd
 
 app=Flask(__name__)
 
+@app.route('/')
+def hello() :
+  return('hello world!')
+
 # Define our "ping" end point
 @app.route('/ping')
 def useless_output():
