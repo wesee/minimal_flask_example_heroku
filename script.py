@@ -69,8 +69,7 @@ def bst():
     print (type(output_data))
     
     # convert our dictionary into a .json file
-    #response = json.dumps(output_data.tolist())
-    response = json.dumps(output_data)
+    response = json.dumps(output_data.tolist())
 
     # return our json file
     return response
