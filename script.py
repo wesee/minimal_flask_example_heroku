@@ -51,12 +51,13 @@ def bst():
     print (request.json)
     print (type(request.json))
 
-    #data = request.json.replace("'", '"')
+    data = request.json.replace("'", '"')
 
-    #print(data)
+    print(data)
+    print (type(data))
 
     # the data the user input, in json format
-    input_data = [pd.Series(json.loads(request.json))]
+    input_data = [pd.Series(json.loads(data))]
     
     print (input_data)
     print (type(input_data))
@@ -68,7 +69,8 @@ def bst():
     print (type(output_data))
     
     # convert our dictionary into a .json file
-    response = json.dumps(output_data.tolist())
+    #response = json.dumps(output_data.tolist())
+    response = json.dumps(output_data)
 
     # return our json file
     return response
